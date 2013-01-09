@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="description" content=""/>
+  <meta name="keywords" content=""/>
+  <link rel="shortcut icon" href="assets/templates/modxhost/img/favicon.png" type="image/x-icon"/>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <script type="text/javascript" src="https://apis.google.com/js/plusone.js"> {lang: 'ru'}</script>
+<title></title>
+</head>
+<body>
+<style>
+  .info-truck{
+    background:url(img/info-sprite.jpg);
+    background-repeat: no-repeat;
+    background-position:-41px -31px;
+    display: inline-block;
+    height: 25px;
+    line-height: 25px;
+    margin-top: 1px;
+    vertical-align: baseline;
+    width: 45px;
+  }
+  .info-help{
+    background:url(img/info-sprite.jpg);
+    background-repeat: no-repeat;
+    background-position:-41px -72px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 1px;
+    vertical-align: baseline;
+    width: 40px;
+  }
+  .info-heart{
+    background:url(img/info-sprite.jpg);
+    background-repeat: no-repeat;
+    background-position:-90px -72px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 1px;
+    vertical-align: baseline;
+    width: 40px;
+  }
+  .info-tel{
+    background:url(img/info-sprite.jpg);
+    background-repeat: no-repeat;
+    background-position:-90px -27px;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 1px;
+    vertical-align: baseline;
+    width: 40px;
+  }
+</style>
+<div class="container">
+<!--Head-->
+  <div class="row">
+    <div class="span5"><img src="img/logo.png"/></div>
+    <div class="span4">
+      <ul class="nav nav-pills" style="margin-top:25px">
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Чай  <b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Пуэры</a></li>
+            <li><a href="#">Улуны</a></li>
+            <li><a href="#">Красные</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Цветочные</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Посуда</a></li>
+        <li><a href="#">Чайные доски</a></li>
+      </ul>
+    </div>
+    <div class="span3">
+      <div class="input-append" style="margin-top:25px">
+        <input id="appendedInputButton" class="span2" type="text" size="16">
+        <button class="btn" type="button"><i class="icon-search"></i> Поиск</button>
+      </div>
+      <div class="row">
+        <div class="span3">
+          <a href="#"><i class="icon-shopping-cart"></i> В корзине 2 товара на 1500 руб.</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--End Head-->  
+<!--Body-->
+  <hr noshade="">
+  <div class="row">
+    <div class="span12">
+      <form class="form-horizontal">
+        <fieldset>
+        <div class="row">
+        <div class="span6">
+          <div class="control-group">
+            <label class="control-label" for="fio">Имя и фамилия</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="fio">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="tel">Номер телефона</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="tel">
+            </div>
+          </div>
+        </div>
+        <div class="span6">
+          <div class="control-group pull-right">
+            <label class="control-label" for="pay">Способ оплаты</label>
+            <div class="controls">
+              <label class="radio">
+              <input id="optionsRadios1" type="radio" checked="" value="option1" name="optionsRadios">Наличными курьеру</label>
+              <label class="radio">
+              <input id="optionsRadios2" type="radio" value="option2" name="optionsRadios">Яндекс.Деньги</label>
+              <label class="radio">
+              <input id="optionsRadios3" type="radio" value="option3" name="optionsRadios">Web Money</label>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="row">
+        <div class="span6">
+          <div class="control-group">
+            <label class="control-label" for="tel">Адрес доставки</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="tel">
+            </div>
+          </div>
+        </div>
+        <div class="span6">
+         <div class="pull-right"> <a class="btn btn-success" href="#">
+            <i class="icon-shopping-cart icon-white"></i>
+            Оплатить
+          </a></div>
+        </div>
+        </div>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+  <hr noshade="">
+  <div class="row">
+    <div class="span6"><h1><i class="info-truck"></i> Доставка:</h1><p>Ростову-на-Дону  — каждый день, с 10:00 до 21:00.<br/>Аксай, Батайск, Азов  — Пн, Ср, Пт, с 10:00 до 18:00.<br/>Россия  — службой EMS.</p></div>
+    <div class="span6"><div class="pull-right" style="margin-right:30px;"><h1><i class="info-tel"></i> Мы на связи:</h1><p>Тел: 8 - 989 - 623 - 8000 и 8 - 989 - 435 - 1923.<br/>Skype: TeaHurbor.<br/>ICQ: 456 - 047 - 610.</p></div></div>
+  </div>
+  <div class="row">
+    <div class="span6"><h1><i class="info-help"></i> Информация:</h1><p>Минимальный заказ чая 50 грамм.<br/>Чай из Китая из провинций: Фудзянь, Лон-Гон и Уи.</p></div>
+    <div class="span6"><div class="pull-right"><h1><i class="info-heart"></i> Акции и скидки:</h1><p>При заказе 500 грамм чая скидка 10%.<br/>Начиная с 3-ей покупки скидка 5%.<br/>Чайный набор + 3 сорта чая по 50 гр. в подарок!</p></div></div>
+  </div>
+<!--End Body-->
+<!--Footer-->
+<hr noshade="">
+  <div class="row" style="text-align: center;">
+    <div class="span3"><a href="#">Доставка</a></div>
+    <div class="span3"><a href="#">Оплата</a></div>
+    <div class="span3"><a href="#">Скидки</a></div>
+    <div class="span3"><a href="#">Статьи</a></div>
+  </div>
+<hr noshade="">
+  <div class="row">
+    <div class="span2 offset10"><img src="img/oa.png" /> <em>«<a href="http://www.originart.ru/">OriginArt</a>»</em></div>
+  </div>
+
+
+<!--End Footer-->
+</div>    
+  <script type="text/javascript" src="js/jquery.js"></script> 
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  
+</body>
+
+</html>
