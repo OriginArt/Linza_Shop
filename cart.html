@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ru">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -79,7 +79,7 @@
           <ul class="nav">
             <!--<li class="active"><a href="#"><i class="icon-home"></i></a></li>-->
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-eye-open"></i> Линзы <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Линзы <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li class="nav-header">Производители</li>
                 <li><a href="#">Jonson & Jonson</a></li>
@@ -93,7 +93,7 @@
               </ul>
             </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-tint"></i> Растворы <b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Растворы <b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li class="nav-header">Производители</li>
                 <li><a href="#">Jonson & Jonson</a></li>
@@ -120,67 +120,53 @@
   </div><!-- /navbar -->
 <!--End Head-->  
 <!--Body-->
-  <h1>Оформление заказа</h1>
+  <h1>Корзина</h1>
   <ul class="breadcrumb">
     <li><a href="#">Главная</a> <span class="divider">/</span></li>
-    <li><a href="#">Корзина</a> <span class="divider">/</span></li>
-    <li class="active">Оформление заказа</li>
+    <li class="active">Корзина</span></li>
   </ul>
-  <p>
-  <!--
-  <div class="row">
-    <div class="span12">
-      -->
-      <form class="form-horizontal">
-        <fieldset>
-        <div class="row">
-        <div class="span6">
-          <div class="control-group">
-            <label class="control-label" for="fio">Имя и фамилия</label>
-            <div class="controls">
-              <input type="text" class="input-xlarge" id="fio">
-            </div>
-          </div>
-          <div class="control-group">
-            <label class="control-label" for="tel">Номер телефона</label>
-            <div class="controls">
-              <input type="text" class="input-xlarge" id="tel">
-            </div>
-          </div>
-        </div>
-        <div class="span6">
-          <div class="control-group pull-right">
-            <label class="control-label" for="pay">Способ оплаты</label>
-            <div class="controls">
-              <label class="radio">
-              <input id="optionsRadios1" type="radio" checked="" value="option1" name="optionsRadios">Наличными курьеру</label>
-              <label class="radio">
-              <input id="optionsRadios2" type="radio" value="option2" name="optionsRadios">Яндекс.Деньги</label>
-              <label class="radio">
-              <input id="optionsRadios3" type="radio" value="option3" name="optionsRadios">Web Money</label>
-            </div>
-          </div>
-        </div>
-        </div>
-        <div class="row">
-        <div class="span6">
-          <div class="control-group">
-            <label class="control-label" for="tel">Адрес доставки</label>
-            <div class="controls">
-              <input type="text" class="input-xlarge" id="tel">
-            </div>
-          </div>
-        </div>
-        <div class="span6">
-         <div class="pull-right"> <a class="btn btn-success" href="#">
-            <i class="icon-shopping-cart icon-white"></i>
-            Оплатить
-          </a></div>
-        </div>
-        </div>
-        </fieldset>
-      </form>
-  </p>
+  
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th></th>
+          <th>Наименование</th>
+          <th>Количество</th>
+          <th>Стоимость</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td><input type="checkbox"></td>
+          <td>Линзы Softlens 59 (Jonson & Jonson)</td>
+          <td><input class="span1" size="16" type="number" value="1"></td>
+          <td>600 руб.</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td><input type="checkbox"></td>
+          <td>Раствор ReNu MultiPlus (Jonson & Jonson)</td>
+          <td><input class="span1" size="16" type="number" value="1"></td>
+          <td>300 руб.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td><input type="checkbox"></td>
+          <td>Контейнер малый (Baush & Lomb)</td>
+          <td><input class="span1" size="16" type="number" value="1"></td>
+          <td>75 руб.</td>
+        </tr>
+        <tr class="info">
+          <td colspan="5">
+            <div class="pull-right">Итого: ваш заказ 975 руб. + доставка 120 руб. = <strong>1095 руб.</strong></div>
+          </td>  
+        </tr>
+      </tbody>
+    </table>
+    <button class="btn btn-small" type="button"><i class="icon-trash"></i> Удалить</button>
+    <button class="btn btn-success pull-right"><i class="icon-ok"></i> Оформить заказ</button>
   <!--  
     </div>
   </div>
@@ -196,7 +182,7 @@
   </div>
 <!--End Body-->
 <!--Footer-->
-<!--
+
 <hr noshade="">
   <div class="row" style="text-align: center;">
     <div class="span3"><a href="#">Доставка</a></div>
@@ -204,12 +190,10 @@
     <div class="span3"><a href="#">Скидки</a></div>
     <div class="span3"><a href="#">Статьи</a></div>
   </div>
--->  
 <hr noshade="">
   <div class="row">
     <div class="span2 offset10"><img src="img/oa.png" /> <em>«<a href="http://www.originart.ru/">OriginArt</a>»</em></div>
   </div>
-
 
 <!--End Footer-->
 </div>    
