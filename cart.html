@@ -126,7 +126,7 @@
     <li class="active">Корзина</span></li>
   </ul>
   
-    <table class="table table-hover">
+    <table class="table table-hover" id="usr-table-order">
       <thead>
         <tr>
           <th>#</th>
@@ -139,38 +139,35 @@
       <tbody>
         <tr>
           <td>1</td>
-          <td><input type="checkbox"></td>
+          <td><input type="checkbox" class="row1"></td>
           <td>Линзы Softlens 59 (Jonson & Jonson)</td>
-          <td><input class="span1" size="16" type="number" value="1"></td>
-          <td>600 руб.</td>
+          <td class='usr-cnt'><input class="span1" size="16" min="1" type="number" value="1"></td>
+          <td class='usr-prc'>600 руб.</td>
         </tr>
         <tr>
           <td>2</td>
-          <td><input type="checkbox"></td>
+          <td><input type="checkbox" class="row2"></td>
           <td>Раствор ReNu MultiPlus (Jonson & Jonson)</td>
-          <td><input class="span1" size="16" type="number" value="1"></td>
-          <td>300 руб.</td>
+          <td class='usr-cnt'><input class="span1" size="16" min="1" type="number" value="1"></td>
+          <td class='usr-prc'>300 руб.</td>
         </tr>
         <tr>
           <td>3</td>
-          <td><input type="checkbox"></td>
+          <td><input type="checkbox" class="row3"></td>
           <td>Контейнер малый (Baush & Lomb)</td>
-          <td><input class="span1" size="16" type="number" value="1"></td>
-          <td>75 руб.</td>
+          <td class='usr-cnt'><input class="span1" size="16" min="1" type="number" value="1"></td>
+          <td class='usr-prc'>75 руб.</td>
         </tr>
         <tr class="info">
           <td colspan="5">
-            <div class="pull-right">Итого: ваш заказ 975 руб. + доставка 120 руб. = <strong>1095 руб.</strong></div>
+            <div class="pull-right">Итого: ваш заказ <span id="usr-your-order">975</span> руб. + доставка <span id="usr_your_delvr">120</span> руб. = <strong id="usr-your-summo">1095</strong>  руб.</div>
           </td>  
         </tr>
       </tbody>
     </table>
-    <button class="btn btn-small" type="button"><i class="icon-trash"></i> Удалить</button>
+    <button class="btn btn-small" id="usr-btn-del" type="button"><i class="icon-trash"></i> Удалить</button>
     <button class="btn btn-success pull-right"><i class="icon-ok"></i> Оформить заказ</button>
-  <!--  
-    </div>
-  </div>
-  -->
+  
   <hr noshade="">
   <div class="row">
     <div class="span6"><h1><i class="info-truck"></i> Доставка:</h1><p>Ростову-на-Дону  — каждый день, с 10:00 до 21:00.<br/>Бесплатная доставка при заказе от 1000 руб.<br/><br/>Аксай, Батайск, Азов  — Пн, Ср, Пт, с 10:00 до 18:00.<br/>Бесплатная доставка при заказе от 1400 руб.</p></div>
@@ -197,7 +194,31 @@
 
 <!--End Footer-->
 </div>    
-  <script type="text/javascript" src="js/jquery.js"></script> 
+  <script type="text/javascript" src="js/jquery.js"></script>
+  <script>
+    
+    function ch(){
+      var sm = 0, vl = 0, ct, pr;
+      
+      $.each( $('#usr-table-order td.usr-cnt'), function () {
+        ct = $(this).find('input[type=number]');
+        pr = ct.parent().next("td") ;
+        vl += parseInt(ct.val()) * parseInt(pr.html());
+      });
+      $('#usr-your-order').html(vl);
+      sm = parseInt($('#usr-your-order').html()) + parseInt($('#usr_your_delvr').html());
+      $('#usr-your-summo').html(sm);
+    }
+    
+    $('input[type=number]').bind( 'change', function(){ ch(); });
+      
+    $('#usr-btn-del').bind( 'click', function(){
+        $.each( $('#usr-table-order input[type=checkbox]:checked'), function () {
+          $(this).parent().parent().remove();
+          ch();
+        });
+    });
+      </script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
 </body>
 </html>
